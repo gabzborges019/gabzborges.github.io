@@ -19,10 +19,12 @@
       align-items: center;
       justify-content: center;
     }
+
     h1 {
       color: #ffcc00;
       margin-bottom: 20px;
     }
+
     .avatar {
       width: 120px;
       height: 120px;
@@ -30,7 +32,12 @@
       object-fit: cover;
       border: 4px solid #ffcc00;
       margin-bottom: 20px;
+      transition: transform 0.3s ease;
     }
+    .avatar:hover {
+      transform: scale(1.1) rotate(3deg);
+    }
+
     a {
       display: flex;
       align-items: center;
@@ -40,16 +47,39 @@
       text-decoration: none;
       font-weight: bold;
       padding: 15px 20px;
-      margin: 10px auto;
+      margin: 12px auto;
       border-radius: 12px;
       max-width: 300px;
-      transition: transform 0.2s ease, background 0.2s ease;
       gap: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+      position: relative;
+      overflow: hidden;
     }
+
+    /* Brilho animado */
+    a::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -75%;
+      width: 50%;
+      height: 200%;
+      background: rgba(255,255,255,0.2);
+      transform: rotate(25deg);
+      transition: all 0.7s ease;
+    }
+
+    a:hover::after {
+      left: 125%;
+    }
+
     a:hover {
-      transform: scale(1.05);
-      background: #ffe066;
+      transform: scale(1.05) translateY(-2px);
+      box-shadow: 0 8px 12px rgba(0,0,0,0.3);
+      filter: brightness(1.1);
     }
+
     .icon {
       width: 24px;
       height: 24px;
@@ -57,18 +87,16 @@
   </style>
 </head>
 <body>
-  <!-- Foto no topo -->
   <img src="https://github.com/gabzborges019.png" alt="G4BZ_ Avatar" class="avatar">
 
   <h1>🌹 G4BZ_ Links</h1>
 
-  <!-- Links com ícones -->
   <a href="https://www.instagram.com/gabzborges_" target="_blank">
     <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" class="icon" alt="Instagram">
     Instagram
   </a>
 
-  <a href="https://www.youtube.com/@gabzborges_" target="_blank">
+  <a href="https://www.youtube.com/@gabzcomz_019" target="_blank">
     <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" class="icon" alt="YouTube">
     YouTube
   </a>
@@ -76,6 +104,11 @@
   <a href="https://open.spotify.com/" target="_blank">
     <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/spotify.svg" class="icon" alt="Spotify">
     Spotify
+  </a>
+
+  <a href="https://www.tiktok.com/@gabzborges_?lang=pt-BR" target="_blank">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg" class="icon" alt="TikTok">
+    TikTok
   </a>
 
   <a href="https://github.com/gabzborges" target="_blank">
