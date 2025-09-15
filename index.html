@@ -3,42 +3,84 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>G4BZ_ | Linktree</title>
+  <title>G4BZ_ | Links</title>
+  <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
   <style>
     body {
-      background-color: #cc0000;
-      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      font-family: 'Russo One', sans-serif;
+      background: linear-gradient(135deg, #cc0000, #ff3300);
       color: #fff;
       text-align: center;
-      padding: 50px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
     h1 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
       color: #ffcc00;
+      margin-bottom: 20px;
+    }
+    .avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #ffcc00;
+      margin-bottom: 20px;
     }
     a {
-      display: block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       background: #ffcc00;
       color: #cc0000;
       text-decoration: none;
       font-weight: bold;
-      padding: 15px;
+      padding: 15px 20px;
       margin: 10px auto;
-      border-radius: 8px;
+      border-radius: 12px;
       max-width: 300px;
-      transition: transform 0.2s ease;
+      transition: transform 0.2s ease, background 0.2s ease;
+      gap: 10px;
     }
     a:hover {
       transform: scale(1.05);
+      background: #ffe066;
+    }
+    .icon {
+      width: 24px;
+      height: 24px;
     }
   </style>
 </head>
 <body>
+  <!-- Foto no topo -->
+  <img src="https://github.com/gabzborges019.png" alt="G4BZ_ Avatar" class="avatar">
+
   <h1>🌹 G4BZ_ Links</h1>
-  <a href="https://www.instagram.com/gabzborges_" target="_blank">Instagram</a>
-  <a href="https://www.youtube.com/@gabzborges_" target="_blank">YouTube</a>
-  <a href="https://open.spotify.com/artist/xxx" target="_blank">Spotify</a>
-  <a href="https://github.com/gabzborges" target="_blank">GitHub</a>
+
+  <!-- Links com ícones -->
+  <a href="https://www.instagram.com/gabzborges_" target="_blank">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" class="icon" alt="Instagram">
+    Instagram
+  </a>
+
+  <a href="https://www.youtube.com/@gabzborges_" target="_blank">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" class="icon" alt="YouTube">
+    YouTube
+  </a>
+
+  <a href="https://open.spotify.com/" target="_blank">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/spotify.svg" class="icon" alt="Spotify">
+    Spotify
+  </a>
+
+  <a href="https://github.com/gabzborges" target="_blank">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" class="icon" alt="GitHub">
+    GitHub
+  </a>
 </body>
 </html>
