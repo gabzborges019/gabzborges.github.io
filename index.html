@@ -38,6 +38,7 @@
       transform: scale(1.1) rotate(3deg);
     }
 
+    /* Estilo dos botões de links */
     a {
       display: flex;
       align-items: center;
@@ -57,6 +58,7 @@
       overflow: hidden;
     }
 
+    /* Brilho animado nos botões */
     a::after {
       content: '';
       position: absolute;
@@ -84,7 +86,7 @@
       height: 24px;
     }
 
-    /* Miniatura do vídeo */
+    /* Estilo do link do último vídeo */
     .video-link {
       display: flex;
       flex-direction: column;
@@ -100,4 +102,59 @@
       box-shadow: 0 4px 6px rgba(0,0,0,0.2);
       overflow: hidden;
       position: relative;
-      transition: transform 0.
+      transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    }
+
+    .video-link img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 8px;
+    }
+
+    .video-link:hover {
+      transform: scale(1.05) translateY(-2px);
+      box-shadow: 0 8px 12px rgba(0,0,0,0.3);
+      filter: brightness(1.1);
+    }
+  </style>
+</head>
+<body>
+  <!-- Avatar -->
+  <img src="https://github.com/gabzborges019.png" alt="G4BZ_ Avatar" class="avatar">
+
+  <!-- Título -->
+  <h1>G4BZ_</h1>
+
+  <!-- Links -->
+  <a href="https://www.instagram.com/gabzborges_" target="_blank">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" class="icon" alt="Instagram">
+    Instagram
+  </a>
+
+  <a href="https://www.youtube.com/@gabzcomz_019" target="_blank">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" class="icon" alt="YouTube">
+    YouTube
+  </a>
+
+  <a href="https://www.tiktok.com/@gabzborges_?lang=pt-BR" target="_blank">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg" class="icon" alt="TikTok">
+    TikTok
+  </a>
+
+  <a href="https://www.twitch.tv/dj_g4bz" target="_blank">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/twitch.svg" class="icon" alt="Twitch">
+    Twitch
+  </a>
+
+  <a href="https://github.com/gabzborges" target="_blank">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" class="icon" alt="GitHub">
+    GitHub
+  </a>
+
+  <!-- Último vídeo -->
+  <a href="https://youtu.be/s0yMPGwHjJw" target="_blank" class="video-link">
+    <img src="https://i.ytimg.com/an_webp/s0yMPGwHjJw/mqdefault_6s.webp?du=3000&sqp=CNjytsYG&rs=AOn4CLCCYzJ_e2V4Ti7qGldmVLCEO6rdoQ" alt="Felquinhas, criança na net e capitalismo tardio">
+    <span>Felquinhas, criança na net e capitalismo tardio</span>
+  </a>
+</body>
+</html>
