@@ -6,23 +6,26 @@
   <title>G4BZ_ | Links</title>
   <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
   <style>
+    /* Estilo base */
     body {
       margin: 0;
-      padding: 0;
+      padding: 20px 10px;
       font-family: 'Russo One', sans-serif;
       background: linear-gradient(135deg, #cc0000, #ff3300);
       color: #fff;
       text-align: center;
-      min-height: 100vh;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      gap: 15px;
     }
 
     h1 {
       color: #ffcc00;
       margin-bottom: 20px;
+      width: 100%;
     }
 
     .avatar {
@@ -31,34 +34,33 @@
       border-radius: 50%;
       object-fit: cover;
       border: 4px solid #ffcc00;
-      margin-bottom: 20px;
       transition: transform 0.3s ease;
     }
     .avatar:hover {
       transform: scale(1.1) rotate(3deg);
     }
 
-    /* Estilo dos botões de links */
-    a {
+    /* Botões de links */
+    a, .video-link {
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
       background: #ffcc00;
       color: #cc0000;
       text-decoration: none;
       font-weight: bold;
-      padding: 15px 20px;
-      margin: 12px auto;
+      padding: 12px 15px;
+      margin: 10px 0;
       border-radius: 12px;
-      max-width: 300px;
-      gap: 10px;
+      max-width: 100%;
+      gap: 8px;
       box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-      transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
       position: relative;
       overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
     }
 
-    /* Brilho animado nos botões */
     a::after {
       content: '';
       position: absolute;
@@ -75,7 +77,7 @@
       left: 125%;
     }
 
-    a:hover {
+    a:hover, .video-link:hover {
       transform: scale(1.05) translateY(-2px);
       box-shadow: 0 8px 12px rgba(0,0,0,0.3);
       filter: brightness(1.1);
@@ -86,35 +88,38 @@
       height: 24px;
     }
 
-    /* Estilo do link do último vídeo */
-    .video-link {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background: #ffcc00;
-      color: #cc0000;
-      border-radius: 12px;
-      padding: 10px;
-      margin: 12px auto;
-      max-width: 300px;
-      text-decoration: none;
-      font-weight: bold;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-      overflow: hidden;
-      position: relative;
-      transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
-    }
-
     .video-link img {
       width: 100%;
       border-radius: 8px;
       margin-bottom: 8px;
     }
 
-    .video-link:hover {
-      transform: scale(1.05) translateY(-2px);
-      box-shadow: 0 8px 12px rgba(0,0,0,0.3);
-      filter: brightness(1.1);
+    /* Responsivo: Tablet */
+    @media (min-width: 600px) {
+      a, .video-link {
+        max-width: 350px;
+        font-size: 1.1em;
+      }
+    }
+
+    /* Responsivo: Desktop */
+    @media (min-width: 1024px) {
+      body {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 20px;
+      }
+
+      .avatar, h1 {
+        width: 100%;
+        text-align: center;
+      }
+
+      a, .video-link {
+        max-width: 300px;
+      }
     }
   </style>
 </head>
@@ -125,7 +130,7 @@
   <!-- Título -->
   <h1>G4BZ_</h1>
 
-  <!-- Links -->
+  <!-- Links sociais -->
   <a href="https://www.instagram.com/gabzborges_" target="_blank">
     <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" class="icon" alt="Instagram">
     Instagram
