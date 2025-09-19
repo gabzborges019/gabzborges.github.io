@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>G4BZ_ | Loja</title>
+  <title>G4BZ_ | Links</title>
   <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
   <style>
+    /* --- Reset e estilo base --- */
     body {
       margin: 0;
       padding: 0;
@@ -17,15 +18,15 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: flex-start;
-      padding-bottom: 40px;
+      justify-content: center;
     }
 
     h1 {
       color: #ffcc00;
-      margin: 20px 0;
+      margin-bottom: 20px;
     }
 
+    /* --- Avatar --- */
     .avatar {
       width: 120px;
       height: 120px;
@@ -39,71 +40,28 @@
       transform: scale(1.1) rotate(3deg);
     }
 
-    .produtos {
+    /* --- Botões de links --- */
+    a {
       display: flex;
-      flex-wrap: wrap;
+      align-items: center;
       justify-content: center;
-      gap: 20px;
-      max-width: 1200px;
-      padding: 20px;
-    }
-
-    .produto-card {
       background: #ffcc00;
       color: #cc0000;
-      border-radius: 12px;
-      width: 200px;
-      padding: 15px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-      transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
-    }
-
-    .produto-card:hover {
-      transform: scale(1.05) translateY(-2px);
-      box-shadow: 0 8px 12px rgba(0,0,0,0.3);
-      filter: brightness(1.1);
-    }
-
-    .produto-card img {
-      width: 100%;
-      border-radius: 8px;
-      margin-bottom: 10px;
-    }
-
-    .produto-card h2 {
-      margin: 5px 0;
-      font-size: 1.1rem;
-    }
-
-    .produto-card p {
-      font-size: 0.9rem;
-      margin: 5px 0;
-    }
-
-    .produto-card span {
-      font-weight: bold;
-      display: block;
-      margin: 5px 0 10px 0;
-    }
-
-    /* Botão de compra com efeito de brilho animado */
-    .btn-comprar {
-      display: inline-block;
-      background: #cc0000;
-      color: #ffcc00;
       text-decoration: none;
       font-weight: bold;
-      padding: 10px 15px;
-      border-radius: 8px;
+      padding: 15px 20px;
+      margin: 12px auto;
+      border-radius: 12px;
+      max-width: 300px;
+      gap: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
       position: relative;
       overflow: hidden;
-      transition: background 0.3s ease, transform 0.3s ease;
     }
 
-    .btn-comprar::after {
+    /* --- Efeito de brilho animado nos botões --- */
+    a::after {
       content: '';
       position: absolute;
       top: -50%;
@@ -115,73 +73,54 @@
       transition: all 0.7s ease;
     }
 
-    .btn-comprar:hover::after {
+    a:hover::after {
       left: 125%;
     }
 
-    .btn-comprar:hover {
-      background: #990000;
-      transform: scale(1.05);
+    a:hover {
+      transform: scale(1.05) translateY(-2px);
+      box-shadow: 0 8px 12px rgba(0,0,0,0.3);
+      filter: brightness(1.1);
     }
 
-    footer {
-      margin-top: 40px;
-      color: #fff;
-      text-align: center;
-      padding: 10px;
-    }
-
-    footer a {
-      color: #ffcc00;
-      text-decoration: none;
-      margin: 0 10px;
-    }
-
-    /* --- Responsividade --- */
-    @media (max-width: 900px) {
-      .produto-card {
-        width: 45%; /* 2 colunas em tablets */
-      }
-    }
-
-    @media (max-width: 600px) {
-      .produto-card {
-        width: 90%; /* 1 coluna em celulares */
-      }
+    /* --- Ícones --- */
+    .icon {
+      width: 24px;
+      height: 24px;
     }
   </style>
 </head>
 <body>
+  <!-- Avatar -->
   <img src="https://github.com/gabzborges019.png" alt="G4BZ_ Avatar" class="avatar">
-  <h1>G4BZ_ Loja</h1>
 
-  <section class="produtos">
-    <div class="produto-card">
-      <img src="https://via.placeholder.com/200x150.png?text=Produto+1" alt="Produto 1">
-      <h2>Produto 1</h2>
-      <p>Descrição curta do produto 1.</p>
-      <span>R$ 50,00</span>
-      <a href="https://wa.me/seunumero?text=Quero%20comprar%20Produto%201" target="_blank" class="btn-comprar">Comprar</a>
-    </div>
+  <!-- Título -->
+  <h1>G4BZ_</h1>
 
-    <div class="produto-card">
-      <img src="https://via.placeholder.com/200x150.png?text=Produto+2" alt="Produto 2">
-      <h2>Produto 2</h2>
-      <p>Descrição curta do produto 2.</p>
-      <span>R$ 75,00</span>
-      <a href="https://wa.me/seunumero?text=Quero%20comprar%20Produto%202" target="_blank" class="btn-comprar">Comprar</a>
-    </div>
+  <!-- Links -->
+  <a href="https://www.instagram.com/gabzborges_" target="_blank">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" class="icon" alt="Instagram">
+    Instagram
+  </a>
 
-    <!-- Adicione mais produtos aqui -->
-  </section>
+  <a href="https://www.youtube.com/@gabzcomz_019" target="_blank">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" class="icon" alt="YouTube">
+    YouTube
+  </a>
 
-  <footer>
-    <p>Me siga nas redes sociais:</p>
-    <a href="https://www.instagram.com/gabzborges_" target="_blank">Instagram</a>
-    <a href="https://www.youtube.com/@gabzcomz_019" target="_blank">YouTube</a>
-    <a href="https://www.tiktok.com/@gabzborges_?lang=pt-BR" target="_blank">TikTok</a>
-    <a href="https://www.twitch.tv/dj_g4bz" target="_blank">Twitch</a>
-    <a href="https://github.com/gabzborges" target="_blank">GitHub</a>
-  </footer>
+  <a href="https://www.tiktok.com/@gabzborges_?lang=pt-BR" target="_blank">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg" class="icon" alt="TikTok">
+    TikTok
+  </a>
+
+  <a href="https://www.twitch.tv/dj_g4bz" target="_blank">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/twitch.svg" class="icon" alt="Twitch">
+    Twitch
+  </a>
+
+  <a href="https://github.com/gabzborges" target="_blank">
+    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" class="icon" alt="GitHub">
+    GitHub
+  </a>
 </body>
 </html>
