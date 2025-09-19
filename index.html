@@ -3,25 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>G4BZ_ | Links</title>
+  <title>G4BZ_C0MUN4</title>
   <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       padding: 20px 10px;
       font-family: 'Russo One', sans-serif;
-      background: linear-gradient(135deg, #cc0000, #ff3300);
-      color: #fff;
-      text-align: center;
+      background: linear-gradient(135deg, #ff007e, #00ffff);
+      color: #ffa200;
       display: flex;
       flex-direction: column;
       align-items: center;
       min-height: 100vh;
-      gap: 15px;
+      gap: 20px;
     }
 
     h1 {
-      color: #ffcc00;
+      color: #ffa200;
       margin-bottom: 20px;
     }
 
@@ -30,7 +29,7 @@
       height: 120px;
       border-radius: 50%;
       object-fit: cover;
-      border: 4px solid #ffcc00;
+      border: 4px solid #ffa200;
       transition: transform 0.3s ease;
     }
     .avatar:hover {
@@ -42,112 +41,96 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 12px;
+      gap: 15px;
       width: 100%;
     }
 
-    /* Botões de links */
-    a {
+    /* Card dos links */
+    .link-card {
       display: flex;
       align-items: center;
       justify-content: center;
-      background: #ffcc00;
-      color: #cc0000;
+      background: #ffa200;
+      color: #ad0056;
       text-decoration: none;
       font-weight: bold;
-      padding: 12px 15px;
-      border-radius: 12px;
+      padding: 15px 20px;
+      border-radius: 16px;
       max-width: 300px;
-      width: 90%;
-      gap: 8px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      width: 100%;
+      gap: 10px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
       position: relative;
       overflow: hidden;
-      transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
     }
 
-    a::after {
-      content: '';
-      position: absolute;
-      top: -50%;
-      left: -75%;
-      width: 50%;
-      height: 200%;
-      background: rgba(255,255,255,0.2);
-      transform: rotate(25deg);
-      transition: all 0.7s ease;
-    }
-
-    a:hover::after {
-      left: 125%;
-    }
-
-    a:hover {
-      transform: scale(1.05) translateY(-2px);
-      box-shadow: 0 8px 12px rgba(0,0,0,0.3);
+    .link-card:hover {
+      transform: scale(1.05) translateY(-3px);
+      box-shadow: 0 12px 20px rgba(0,0,0,0.35);
       filter: brightness(1.1);
     }
 
-    .icon {
-      width: 24px;
-      height: 24px;
+    .link-card img {
+      width: 40px;
+      height: 28px;
     }
 
-    /* Miniatura do vídeo */
-    .video-link {
+    /* Miniatura do vídeo como card */
+    .video-card {
       display: flex;
       flex-direction: column;
       align-items: center;
       background: #ffcc00;
-      color: #cc0000;
-      border-radius: 12px;
+      color: #ad0056;
+      border-radius: 16px;
       padding: 10px;
       margin-top: 20px;
-      max-width: 300px;
+      max-width: 320px;
       width: 90%;
       text-decoration: none;
       font-weight: bold;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.25);
       overflow: hidden;
-      position: relative;
       transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
     }
 
-    .video-link img {
+    .video-card img {
       width: 100%;
-      border-radius: 8px;
+      border-radius: 12px;
       margin-bottom: 8px;
     }
 
-    .video-link:hover {
-      transform: scale(1.05) translateY(-2px);
-      box-shadow: 0 8px 12px rgba(0,0,0,0.3);
+    .video-card:hover {
+      transform: scale(1.05) translateY(-3px);
+      box-shadow: 0 12px 20px rgba(0,0,0,0.35);
       filter: brightness(1.1);
     }
 
-    /* Tablet: >=600px */
+    /* Tablet >= 600px */
     @media (min-width: 600px) {
-      a, .video-link {
+      .link-card, .video-card {
         max-width: 350px;
         font-size: 1.1em;
       }
     }
 
-    /* Desktop: >=1024px */
+    /* Desktop >=1024px */
     @media (min-width: 1024px) {
       .links-container {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        justify-content: center;
+        grid-template-columns: repeat(4, 1fr);
         gap: 20px;
-        max-width: 700px;
+        max-width: 720px;
+        justify-content: center;
       }
 
-      a {
+      .link-card, .video-card {
         width: 300px;
       }
 
-      .video-link {
+      .video-card {
+        grid-column: span 2;
         margin-top: 30px;
       }
     }
@@ -162,34 +145,29 @@
 
   <!-- Links sociais -->
   <div class="links-container">
-    <a href="https://www.instagram.com/gabzborges_" target="_blank">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" class="icon" alt="Instagram">
+    <a href="https://www.instagram.com/gabzborges_" target="_blank" class="link-card">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram">
       Instagram
     </a>
 
-    <a href="https://www.youtube.com/@gabzcomz_019" target="_blank">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" class="icon" alt="YouTube">
+    <a href="https://www.youtube.com/@gabzcomz_019" target="_blank" class="link-card">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" alt="YouTube">
       YouTube
     </a>
 
-    <a href="https://www.tiktok.com/@gabzborges_?lang=pt-BR" target="_blank">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg" class="icon" alt="TikTok">
+    <a href="https://www.tiktok.com/@gabzborges_?lang=pt-BR" target="_blank" class="link-card">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg" alt="TikTok">
       TikTok
     </a>
 
-    <a href="https://www.twitch.tv/dj_g4bz" target="_blank">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/twitch.svg" class="icon" alt="Twitch">
+    <a href="https://www.twitch.tv/dj_g4bz" target="_blank" class="link-card">
+      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/twitch.svg" alt="Twitch">
       Twitch
-    </a>
-
-    <a href="https://github.com/gabzborges" target="_blank">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" class="icon" alt="GitHub">
-      GitHub
     </a>
   </div>
 
   <!-- Último vídeo -->
-  <a href="https://youtu.be/s0yMPGwHjJw" target="_blank" class="video-link">
+  <a href="https://youtu.be/s0yMPGwHjJw" target="_blank" class="video-card">
     <img src="https://i.ytimg.com/an_webp/s0yMPGwHjJw/mqdefault_6s.webp?du=3000&sqp=CNjytsYG&rs=AOn4CLCCYzJ_e2V4Ti7qGldmVLCEO6rdoQ" alt="Felquinhas, criança na net e capitalismo tardio">
     <span>Felquinhas, criança na net e capitalismo tardio</span>
   </a>
